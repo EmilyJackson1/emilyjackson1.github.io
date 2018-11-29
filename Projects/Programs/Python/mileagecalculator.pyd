@@ -1,0 +1,5 @@
+milesDriven = 300;
+gallonsUsed = 22;
+
+milesPerGallon = milesDriven/gallonsUsed
+print milesPerGallon

@@ -1,0 +1,33 @@
+import os
+
+word = "cactus"
+
+maximum_guesses = 6
+solved_words = 0
+
+current_guess = 0
+correct_guesses = 0
+dashes = []
+for letter in word:
+    dashes.append("_")
+while current_guess < maximum_guesses:
+    current_guess += 1
+    os.system("clear")
+    print("Solved letters "+str(correct_guesses)+" / "+str(len(word)))
+    print("Guess "+str(current_guess)+" / "+str(maximum_guesses))
+    print("\n{}\n".format(" ".join(dashes)))
+    guess = raw_input("Guess: ")
+    guess = guess.lower()
+    if not len(guess) == 1 or not guess.isalpha():
+        current_guess -= 1
+    index = 0
+    for letter in word:
+        if letter == guess:
+            correct_guesses += 1
+            dashes[index] = letter
+        index += 1
+    if "_" not in dashes:
+      print "You win!"
+      break
+if current_guess >= maximum_guesses:
+  print "You lose! LOSER!!!!!"
