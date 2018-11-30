@@ -1,14 +1,14 @@
-int rad = 60; 
-float xpos, ypos;  
+int rad = 60;
+float xpos, ypos;
 
 float xspeed = 2.8;
 float yspeed = 2.2;
 
 int xdirection = 1;
-int ydirection = 1; 
+int ydirection = 1;
 
 
-void setup() 
+void setup()
 {
   size(640, 360);
   noStroke();
@@ -20,10 +20,10 @@ void setup()
   ypos = height/2;
 }
 
-void draw() 
+void draw()
 {
   background(0, 0, 255);
-  
+
   if (xpos > width-rad || xpos < rad) {
     xdirection *= -1;
   }
