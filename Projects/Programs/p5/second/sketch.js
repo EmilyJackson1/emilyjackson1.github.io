@@ -1,7 +1,11 @@
 function setup() {
-  // put setup code here
+  createCanvas(500,120)
 }
 
 function draw() {
-  // put drawing code here
+  if(mouseisPressed){
+  fill(0);
+} else {
+  fill (300);
 }
+  square(mouseX, mouseY, 100, 100)
