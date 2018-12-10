@@ -8,4 +8,4 @@ function draw() {
 } else {
   fill (300);
 }
-  square(mouseX, mouseY, 100, 100)
+  square(mouseX, mouseY, 100,100,100, 100)
